@@ -156,6 +156,7 @@ h4{
 	margin-left: 13px;
 }
 /*header*/
+
 .mobile-menu{
 	display: none;
 	width: 24px;
@@ -221,9 +222,12 @@ h4{
     bottom: 20%;
     transition: 0.4s ease;
 }
+.uppercase{
+	text-transform: uppercase;
+}
 header{
 	background: #fff;
-	padding: 34px 40px;
+	padding: 20px 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -469,6 +473,7 @@ footer{
 footer .footer-widget{
 	display: flex;
 	align-items: center;
+	width: 100%;
 }
 footer .copyrights{
 	color: rgba(0, 22, 32, 0.6);

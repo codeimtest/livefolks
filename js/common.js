@@ -31,7 +31,9 @@ $('.mobile-menu').click(function(e){
 
 //feedback carousel
 const swiper = new Swiper('.feedback-carousel', {
-    slidesPerView: 1,
+  slidesPerView: 1.2,
+  watchOverflow: true,
+  spaceBetween: 8,
     centeredSlides: true,
     mode: 'horizontal',
     loop: true,
