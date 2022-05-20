@@ -154,7 +154,16 @@
 	.case-item {
 		margin-top: 24px;
 	}
-
+	.contact-right,.contact-right .contact-btn{
+		width: 100%;
+	}
+	.contact-right .contact-btn{
+		background: #fff;
+		color: var(--accent);
+	}
+	.contact-btn::before{
+		content: url(../images/chat-white.svg);
+	}
 }
 
 /* sm <= Medium (md) */
