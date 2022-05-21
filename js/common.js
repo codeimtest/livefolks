@@ -11,7 +11,7 @@ $('.language').click(function(e){
     e.preventDefault();
 });
 $('.contact-btn').click(function(event){
-    $('.contact-widget-header').toggleClass('active');
+    $(this).next('.contact-widget-header').toggleClass('active');
     event.stopPropagation();
     event.preventDefault();
 });
@@ -28,7 +28,7 @@ $(".show-more").on("click", function(e) {
 //mobile menu
 $('.mobile-menu').click(function(e){
     $(this).toggleClass('active');
-    $('.header-right').toggleClass('active');
+    $('.mobile-menu-screen').toggleClass('active');
 });
 
 //feedback carousel

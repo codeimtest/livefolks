@@ -47,7 +47,7 @@
 		margin: 44px 0 0 0;
 	}
 	.case-filter{
-		padding: 20px 0;
+		padding: 24px 0;
 	}
 	.case-filter button{
 		font-size: 14px;
@@ -111,7 +111,14 @@
 		z-index: 13;
 	}
 	.mobile-menu.active{
-		z-index: 13;
+		z-index: 100;
+		height: auto;
+	}
+	.language-list-menu{
+		position: initial;
+	}
+	.mobile-menu-screen ul li a{
+		color: #fff;
 	}
 	.header-right{
 		display: none;
@@ -128,7 +135,7 @@
 	.header-right.active{
 		display: block;
 		position: absolute;
-		background: #E9EFF3;
+		background: var(--accent);
 		top: 0;
 		left: 0;
 		right: 0;
@@ -138,13 +145,35 @@
 		z-index: 1;
 		padding-top: 110px;
 	}
-	header ul{
+	header ul,.mobile-menu-screen ul{
 		flex-flow: column;
 	}
-	header ul li{
-		margin: 0 24px 24px 24px;
+	header ul li,.mobile-menu-screen ul li{
+		margin-bottom: 32px;
 		line-height: 40px;
-		font-size: 32px;
+	}
+	header ul li,.mobile-menu-screen ul li:last-child{
+		margin-bottom: 0;
+	}
+	header ul li a,.mobile-menu-screen ul li a{
+		color: #fff;
+		font-weight: 700;
+		font-size: 26px;
+	}
+	.mobile-menu-screen.active .contact-btn{
+		background: #fff;
+		margin-top: 48px;
+		width: 100%;
+		color: var(--accent);
+	}
+	.contact-widget-header{
+		position: initial;
+		padding: 0;
+		margin-top: 32px;
+		background: var(--accent);
+	}
+	.active-language span,.language-list-menu-item a{
+		color: #fff;
 	}
 	.header-right.active .header-info{
 		flex-flow: column;
@@ -159,6 +188,9 @@
 	}
 	.contact-right,.contact-right .contact-btn{
 		width: 100%;
+	}
+	header{
+		padding: 16px
 	}
 	.contact-right .contact-btn{
 		background: #fff;
@@ -177,13 +209,27 @@
 		top: 0;
 		position: -webkit-sticky;
 		position: sticky;
-		z-index: 2;
 		background: #fff;
 		
 	  }
 	 footer .fa-paper-plane{
 		 font-size: 20px;
 	 } 
+	 .mobile-menu-screen.active{
+		 background: var(--accent);
+		 position: fixed;
+		 height: 100%;
+		 width: 100%;
+		 top: 0;
+		 left: 0;
+		 padding: 16px 0;
+		 z-index: 99;
+		 padding-right: var(--bs-gutter-x,.75rem);
+		padding-left: var(--bs-gutter-x,.75rem);
+		margin-right: auto;
+		margin-left: auto;
+		overflow: auto;
+	 }
 }
 
 /* sm <= Medium (md) */

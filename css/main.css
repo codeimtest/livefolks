@@ -168,50 +168,20 @@ h4{
 
 .mobile-menu{
 	display: none;
-	width: 24px;
-	height: 24px;
+	width: 18px;
+	height: 12px;
 	position: relative;
 	transition: 0.1s ease;
 }
 .mobile-menu.active{
-	width: 24px;
-	height: 30px;
 	transition: 0.1s ease;
 }
 .mobile-menu.active span {
-    content: '';
-    width: 2px;
-    height: 100%;
-    background: #000;
-    position: absolute;
-    right: 0;
-    top: -6px;
-    left: 0;
-    margin: auto;
+    display: none;
 }
-.mobile-menu.active.mobile-menu::before {
-    content: '';
-    width: 68%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 0;
-    left: 0px;
-    transform: rotate(-240deg);
-    -webkit-transform: rotate(-240deg);
-    transition: 0.4s ease;
-}
-.mobile-menu.active.mobile-menu::after {
-    content: '';
-    width: 68%;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 0;
-    right: 0px;
-    transform: rotate(240deg);
-    -webkit-transform: rotate(240deg);
-    transition: 0.4s ease;
+
+.active.mobile-menu::after,.active.mobile-menu::before,.active.mobile-menu span{
+	background: #fff;
 }
 .mobile-menu::after {
     content: '';
@@ -219,8 +189,8 @@ h4{
     height: 2px;
     background: #000;
     position: absolute;
-    top: 20%;
-    transition: 0.4s ease;
+    bottom: 0;
+    transition: .2s ease;
 }
 .mobile-menu::before {
     content: '';
@@ -228,8 +198,35 @@ h4{
     height: 2px;
     background: #000;
     position: absolute;
-    bottom: 20%;
-    transition: 0.4s ease;
+    top: 0;
+    transition: .2s ease;
+}
+.mobile-menu.active::before{
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+}
+.mobile-menu.active::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 100%;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+	bottom: auto;
+}
+.mobile-menu span {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 .uppercase{
 	text-transform: uppercase;
@@ -241,7 +238,7 @@ header{
 	justify-content: space-between;
 	align-items: center;
 }
-header ul{
+header ul,.mobile-menu-screen ul{
 	list-style: none;
 	padding-left: 0;
 	margin-bottom: 0;
@@ -250,12 +247,12 @@ header ul{
 header ul li{
 	margin: 0 20px;
 }
-header ul li a{
+header ul li a,.mobile-menu-screen ul li a{
 	color: var(--text);
 	text-decoration: none;
 	transition: 0.4s ease;
 }
-header ul li a:hover{
+header ul li a:hover,.mobile-menu-screen ul li a:hover{
 	color: var(--text);
 	opacity: 0.8;
 	transition: 0.4s ease;
