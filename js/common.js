@@ -1,3 +1,5 @@
+//copyright year
+document.getElementById('copyright-year').appendChild(document.createTextNode(new Date().getFullYear()))
 //header btns
 $('.case-filter button').click(function(e){
     $('.case-filter button').removeClass('active');
@@ -21,7 +23,7 @@ $('.show-more-content').hide();
 $(".show-more").on("click", function(e) {
     $('.show-more-content').delay(100).fadeIn();
     e.preventDefault();
-})
+});
 
 //mobile menu
 $('.mobile-menu').click(function(e){
@@ -69,7 +71,7 @@ const swipermodules = new Swiper('.case-carousel', {
       nextEl: '.case-next',
       prevEl: '.case-prev',
     },
-    slidesPerView: 1.2,
+    slidesPerView: 2.1,
     centeredSlides: false,
     spaceBetween: 12,
     watchOverflow: true,

@@ -40,16 +40,24 @@ body {
 	color: var(--text);
 	min-width: 320px;
 	position: relative;
-	overflow: visible;
+	margin: 0;
+  	overflow-x: hidden;
+
 }
+main{
+	height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 
 /* USER STYLES */
 section{
 	position: relative;
 }
-
-main{
-	overflow: hidden;
+html{ overflow-x: hidden;}
+img{
+   max-width:100%;
 }
 .image {
 	max-width: 100%;
@@ -109,6 +117,7 @@ h4{
     justify-content: center;
 	margin-bottom: 40px;
 }
+
 .case-filter button{
 	padding: 9px 16px;
 	border: 1px solid rgba(0, 22, 32, 0.1);
@@ -263,6 +272,10 @@ header .header-info {
 	text-decoration: none;
 	transition: 0.4s ease;
 	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+.case-screen{
+	height: 50vh;
 }
 .logo:hover{
 	opacity: 0.8;
@@ -282,6 +295,9 @@ header .header-info {
 	display: flex;
 	align-items: center;
 	margin-right: 40px;
+}
+.header-info .language img,.language-list-menu-item img{
+	object-fit: cover;
 }
 .language-list-menu-item img{
 	margin-right: 17px;
@@ -331,7 +347,9 @@ header .header-info {
 	display: flex;
 	align-items: center;
 	margin: 40px 0;
-	height: 100%;
+}
+.page-screen{
+	height: 70vh;
 }
 .contact-right{
 	position: relative;

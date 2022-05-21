@@ -44,7 +44,10 @@
 		margin-bottom: 40px;
 	}
 	.first-section{
-		margin: 44px 0 20px 0;
+		margin: 44px 0 0 0;
+	}
+	.case-filter{
+		padding: 20px 0;
 	}
 	.case-filter button{
 		font-size: 14px;
@@ -164,6 +167,23 @@
 	.contact-btn::before{
 		content: url(../images/chat-white.svg);
 	}
+	.case-filter button:first-child{
+		margin-left: 0;
+	}
+	.case-filter{
+		margin-bottom: 0;
+	}
+	.sticky {
+		top: 0;
+		position: -webkit-sticky;
+		position: sticky;
+		z-index: 2;
+		background: #fff;
+		
+	  }
+	 footer .fa-paper-plane{
+		 font-size: 20px;
+	 } 
 }
 
 /* sm <= Medium (md) */
@@ -227,6 +247,9 @@
 	}
 	.result{
 		padding-bottom: 64px;
+	}
+	.page-screen{
+		height: 50vh;
 	}
 }
 
@@ -303,6 +326,10 @@
 	}
 	.footer-widget .social{
 		margin-left: auto;
+	}
+	.case-filter {
+		margin-bottom: 40px;
+		padding-bottom: 0;
 	}
 }
 
